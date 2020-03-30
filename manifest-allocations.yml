@@ -3,10 +3,11 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-brossiterirl.cfapps.io
-  memory: 650M
+  memory: 384M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: http://registration-pal-brossiterirl.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    JAVA_OPTS: '-Xss256k -Xm192m -XX:MaxMetaspaceSize=100m'
   services:
   - tracker-allocations-database
