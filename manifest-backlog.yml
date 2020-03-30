@@ -3,7 +3,7 @@ applications:
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
   - route: backlog-pal-brossiterirl.cfapps.io
-  memory: 400M
+  memory: 650M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: http://registration-pal-brossiterirl.cfapps.io
